@@ -19,3 +19,13 @@ insert into tablita(name,id,profession) values ('Erick', 2, 'Zoilas boyfriend');
 insert into tablita values (3,'a','ing')
                            ,(4,'b','ing')
                            ,(5,'c', 'dev');
+--  UPDATE
+
+update tabla_x set attr=1.3, name='Pepon' where id=1;
+
+UPDATE Books, Orders
+SET Orders.Quantity = Orders.Quantity+2,
+    Books.InStock = Books.InStock-2
+WHERE
+    Books.BookID = Orders.BookID
+    AND Orders.OrderID = 1002;
