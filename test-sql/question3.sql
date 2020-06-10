@@ -1,0 +1,50 @@
+SELECT FIRST_NAME, LAST_NAME, LOWER (EMAIL) ||'@orait.com' "EMAIL ADDRESS",HIRE_DATE, TO_CHAR(SALARY,'$0G000D00') SALARY
+
+    FROM EMPLOYEES
+
+            WHERE HIRE_DATE > (SELECT HIRE_DATE
+
+                                FROM EMPLOYEES
+
+                                WHERE LAST_NAME = 'Davies')
+
+ORDER BY FIRST_NAME DESC;
+
+ 
+ SELECT FIRST_NAME, LAST_NAME, LOWER (EMAIL) ||'@orait.com' "EMAIL ADDRESS",HIRE_DATE, TO_CHAR(SALARY,'$99G999D00') SALARY
+
+    FROM EMPLOYEES
+
+            WHERE HIRE_DATE > (SELECT HIRE_DATE
+
+                                FROM EMPLOYEES
+
+                                WHERE LAST_NAME = 'Davies')
+
+ORDER BY FIRST_NAME DESC;
+
+
+SELECT FIRST_NAME, LAST_NAME, LOWER (EMAIL) ||'@orait.com' "EMAIL ADDRESS",HIRE_DATE, TO_CHAR(SALARY,'$99,999.00') SALARY
+
+    FROM EMPLOYEES
+
+            WHERE HIRE_DATE > (SELECT HIRE_DATE
+
+                                FROM EMPLOYEES
+
+                                WHERE LAST_NAME = 'Davies')
+
+ORDER BY FIRST_NAME DESC;
+
+
+ SELECT FIRST_NAME, LAST_NAME, LOWER (EMAIL) ||'@orait.com' "EMAIL ADDRESS",HIRE_DATE, TO_CHAR(SALARY,'$99,999D00') SALARY
+
+    FROM EMPLOYEES
+
+            WHERE HIRE_DATE > (SELECT HIRE_DATE
+
+                                FROM EMPLOYEES
+
+                                WHERE LAST_NAME = 'Davies')
+
+ORDER BY FIRST_NAME DESC;
